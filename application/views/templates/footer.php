@@ -92,12 +92,17 @@
                 $('#tb_siswa').DataTable({
                     responsive: true,
                     pageLength: 10,
-                    lengthMenu: [[5, 10, 20, -1], [4, 10, 20, "Semua"]]
+                    lengthMenu: [[5, 10, 20, -1], [5, 10, 20, "Semua"]]
                 });
                 $('#tb_komp_keahlian').DataTable({
                     responsive: true,
-                    pageLength: 10,
-                    lengthMenu: [[5, 10, 20, -1], [4, 10, 20, "Semua"]]
+                    pageLength: 5,
+                    lengthMenu: [[5, 10, 20, -1], [5, 10, 20, "Semua"]]
+                });
+                $('.table-base').DataTable({
+                    responsive: true,
+                    pageLength: 3,
+                    lengthMenu: [[3, 10, 20, -1], [3, 10, 20, "Semua"]]
                 });
             }
         );

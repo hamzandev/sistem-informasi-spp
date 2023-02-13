@@ -11,6 +11,7 @@ class Siswa_model extends CI_Model
         $this->db->join('tb_komp_keahlian', 'tb_komp_keahlian.id_komp_keahlian = tb_siswa.id_komp_keahlian');
         return $this->db->get()->result();
     }    
+   
     public function getByNisn($nisn)
     {
         $this->db->select('tb_siswa.*, tb_komp_keahlian.nama_keahlian, tb_kelas.nama_kelas');
