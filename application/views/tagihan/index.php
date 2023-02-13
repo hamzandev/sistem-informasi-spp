@@ -35,6 +35,11 @@
 		<!-- Tampilkan data tagihan -->
 		<div class="row mt-5">
 			<div class="col-md-10">
+				<div class="alert alert-info mb-3">
+					<span class="text-muted d-block">Nominal yang telah dibayar :</span>
+					<h3 class="text-end">Rp. <?= number_format($subtotal_dibayar, 0, ".", ".") ?>,00</h3>
+				</div>
+
 				<div class="card">
 					<div class="card-header d-flex justify-content-between align-items-center">
 						<h4>Menampilkan Tagihan Siswa : <small class="badges bg-warning text-light px-1 rounded"><?= $this->input->post('nisn'); ?></small></h4>

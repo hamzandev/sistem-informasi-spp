@@ -6,6 +6,15 @@ class Tagihan extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
+        
+        if ($this->session->has_userdata('is_login') == false) {
+            redirect('auth');
+        }
+
+        if (!$this->session->has_userdata('user_level')) {
+            redirect('dashboard');
+        }
+        
         $this->load->library('form_validation');
         $this->load->model('Tagihan_model');
         $this->load->model('Spp_model');
@@ -28,6 +37,10 @@ class Tagihan extends CI_Controller {
                 nisn: $this->input->post('nisn'),
                 status: 'Belum Dibayar'
             );
+            $harga_spp = $this->db->get_where('tb_spp', ['tahun' => date('Y')])->row();
+            $dibayar = $this->db->get_where('tb_pembayaran', ['nisn' => $this->input->post('nisn')])->result();
+
+            $data['subtotal_dibayar'] = $harga_spp->nominal * count($dibayar);
         }
 
         if (!$this->form_validation->run()) {

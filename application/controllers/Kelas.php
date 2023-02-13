@@ -6,6 +6,15 @@ class Kelas extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
+        
+        if ($this->session->has_userdata('is_login') == false) {
+            redirect('auth');
+        }
+
+        if ($this->session->userdata('user_level') != 'admin') {
+            redirect('dashboard');
+        }
+        
         $this->load->model('Kelas_model');
         $this->load->model('Kompetensi_keahlian_model');
         $this->load->library('form_validation');

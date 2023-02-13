@@ -6,6 +6,14 @@ class Petugas extends CI_Controller {
     public function __construct()
     {
         parent::__construct();
+        
+        if ($this->session->has_userdata('is_login') == false) {
+            redirect('auth');
+        }
+
+        if ($this->session->userdata('user_level') != 'admin') {
+            redirect('dashboard');
+        }
         $this->load->library('form_validation');
         $this->load->model('Petugas_model');
     }
