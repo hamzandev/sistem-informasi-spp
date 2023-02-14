@@ -45,7 +45,7 @@
 						<td><?= $p->nama ?></td>
 						<td><?= $p->tgl_bayar ?></td>
 						<td><?= $p->bulan_dibayar ?></td>
-						<td><?= $p->jumlah_bayar ?></td>
+						<td>Rp.<?= number_format($p->jumlah_bayar,0, '.', '.') ?></td>
 					</tr>
 				<?php endforeach ?>
 		</tbody>
@@ -66,6 +66,11 @@
 				<td>NISN Siswa</td>
 				<td>:</td>
 				<td><?= $pembayaran->nisn ?></td>
+			</tr>
+			<tr>
+				<td>Nama Siswa</td>
+				<td>:</td>
+				<td><?= $pembayaran->nama ?></td>
 			</tr>
 			<tr>
 				<td>Tgl.Bayar</td>

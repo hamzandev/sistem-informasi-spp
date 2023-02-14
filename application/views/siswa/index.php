@@ -20,7 +20,7 @@
 				</a>
 			</div>
 			<div class="card-body">
-				<table id="tb_siswa" class="table table-stripped table-sm table-bordered">
+				<table id="tb_siswa" class="table table-responsive table-stripped table-sm table-bordered">
 					<thead class="table-dark rounded">
 						<tr>
 							<th>#</th>

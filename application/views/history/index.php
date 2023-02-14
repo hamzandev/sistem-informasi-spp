@@ -5,7 +5,7 @@
 				<h4>History Transaksi Pembayaran</h4>
 			</div>
 			<div class="card-body">
-				<table id="tb_komp_keahlian" class="table table-stripped table-bordered">
+				<table id="tb_komp_keahlian" class="table table-responsive table-sm table-stripped table-bordered">
 					<thead class="table-dark rounded">
 						<tr>
 							<th>#</th>
@@ -16,7 +16,7 @@
 							<th>Tgl. bayar</th>
 							<th>Bulan Yang Dibayar</th>
 							<th>Jumlah Dibayar</th>
-							<?php if($this->session->has_userdata('user_level')) : ?>
+							<?php if($this->session->userdata('user_level') == 'admin') : ?>
 								<th>Aksi</th>
 							<?php endif ?>
 						</tr>
@@ -32,9 +32,9 @@
 								<td><?= $s->tgl_bayar ?></td>
 								<td><?= $s->bulan_dibayar ?></td>
 								<td>Rp.<?= $s->jumlah_bayar ?></td>
-								<?php if($this->session->has_userdata('user_level')) : ?>
+								<?php if($this->session->userdata('user_level') == 'admin') : ?>
 									<td>
-										<a href="<?= base_url('laporan/pembayaran?idpembayaran='.$s->id_pembayaran) ?>" class="btn btn-primary btn-sm">
+										<a onclick="return confirm('Unduh file PDF?')" href="<?= base_url('laporan/pembayaran?idpembayaran='.$s->id_pembayaran) ?>" class="btn btn-primary btn-sm">
 											<i class="fas fa-print"></i>
 											 Export PDF
 										</a>

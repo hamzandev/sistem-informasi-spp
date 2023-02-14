@@ -5,12 +5,12 @@
 		<div class="card shadow">
 			<div class="card-header d-flex justify-content-between align-items-center">
 				<h4>Laporan Data Siswa</h4>
-				<a href="<?= base_url('laporan/siswa') ?>" class="btn btn-sm btn-warning"><i class="fas fa-print"></i>
+				<a onclick="return confirm('Unduh file PDF?')" href="<?= base_url('laporan/siswa') ?>" class="btn btn-sm btn-warning"><i class="fas fa-print"></i>
 					Export PDF
 				</a>
 			</div>
 			<div class="card-body">
-				<table  class="table table-stripped table-base table-sm table-bordered">
+				<table  class="table table-responsive table-stripped table-base table-sm table-bordered">
 					<thead class="table-dark rounded">
 						<tr>
 							<th>#</th>
@@ -50,7 +50,7 @@
 		<div class="card shadow">
 			<div class="card-header d-flex justify-content-between align-items-center">
 				<h4>Laporan Data Kelas</h4>
-				<a href="<?= base_url('laporan/kelas') ?>" class="btn btn-sm btn-warning"><i class="fas fa-print"></i>
+				<a onclick="return confirm('Unduh file PDF?')" href="<?= base_url('laporan/kelas') ?>" class="btn btn-sm btn-warning"><i class="fas fa-print"></i>
 								Export PDF
 				</a>
 			</div>
@@ -83,12 +83,12 @@
 		<div class="card shadow">
 			<div class="card-header d-flex justify-content-between align-items-center">
 				<h4>Laporan Data Komp.Keahlian (Jurusan)</h4>
-				<a href="<?= base_url('laporan/jurusan') ?>" class="btn btn-sm btn-warning"><i class="fas fa-print"></i>
+				<a onclick="return confirm('Unduh file PDF?')" href="<?= base_url('laporan/jurusan') ?>" class="btn btn-sm btn-warning"><i class="fas fa-print"></i>
 								Export PDF
 				</a>
 			</div>
 			<div class="card-body">
-				<table  class="table table-stripped table-base table-sm table-bordered">
+				<table  class="table table-responsive table-stripped table-base table-sm table-bordered">
 					<thead class="table-dark rounded">
 						<tr>
 							<th>#</th>
@@ -118,12 +118,12 @@
 		<div class="card shadow">
 			<div class="card-header d-flex justify-content-between align-items-center">
 				<h4>Laporan Transaksi Pembayaran</h4>
-				<a href="<?= base_url('laporan/pembayaran') ?>" class="btn btn-sm btn-warning"><i class="fas fa-print"></i>
+				<a onclick="return confirm('Unduh file PDF?')" href="<?= base_url('laporan/pembayaran') ?>" class="btn btn-sm btn-warning"><i class="fas fa-print"></i>
 								Export PDF
 				</a>
 			</div>
 			<div class="card-body">
-				<table  class="table table-stripped table-base table-sm table-bordered">
+				<table  class="table table-responsive table-stripped table-base table-sm table-bordered">
 					<thead class="table-dark rounded">
 						<tr>
 							<th>#</th>
@@ -165,12 +165,12 @@
 		<div class="card shadow">
 			<div class="card-header d-flex justify-content-between align-items-center">
 				<h4>Laporan Data Petugas</h4>
-				<a href="<?= base_url('laporan/petugas') ?>" class="btn btn-sm btn-warning"><i class="fas fa-print"></i>
+				<a onclick="return confirm('Unduh file PDF?')" href="<?= base_url('laporan/petugas') ?>" class="btn btn-sm btn-warning"><i class="fas fa-print"></i>
 								Export PDF
 				</a>
 			</div>
 			<div class="card-body">
-				<table  class="table table-stripped table-base table-sm table-bordered">
+				<table  class="table table-responsive table-stripped table-base table-sm table-bordered">
 					<thead class="table-dark rounded">
 						<tr>
 							<th>#</th>

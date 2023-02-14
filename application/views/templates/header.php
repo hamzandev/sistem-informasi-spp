@@ -85,7 +85,7 @@
             <?php if($this->session->userdata('user_level') === 'admin') : ?>
                 <!-- Heading -->
                 <div class="sidebar-heading">
-                    administrator
+                    admin
                 </div>
 
                 <!-- Nav Item - Master Data Menu (Admin) -->
